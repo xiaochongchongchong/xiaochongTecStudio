@@ -19,6 +19,7 @@ xiaochongTecStudio/
 | 方案 A | 手写实现，含企业级优化（智能切分、混合检索、Rerank、引用溯源） | [README.md](rag/README.md) |
 | 方案 B | LangChain 标准框架重构 | [README_langchain.md](rag/README_langchain.md) |
 | 代码详解 | 逐段讲解两方案每个函数/概念 | [DOCS_CODE.md](rag/DOCS_CODE.md) |
+| 项目指南 | 背景/选型/环境搭建/复现/模型切换/优化方向 | [PROJECT_GUIDE.md](rag/PROJECT_GUIDE.md) |
 
 **技术栈**：本地 embedding（bge-small-zh）+ 本地向量库（chromadb）+ 远程大模型（dsv4-flash，OpenAI 兼容接口）。
 
