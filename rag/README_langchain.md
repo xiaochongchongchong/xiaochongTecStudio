@@ -14,7 +14,8 @@
 D:\ai\rag
 ├── src/rag_langchain/       # 方案 B：LangChain 版
 │   ├── __init__.py
-│   └── main.py              # build_chain() + main()
+│   ├── main.py              # build_chain() + main()（单步基线）
+│   └── agent.py             # make_agent() + main()（多步 Agent，LangGraph）
 ├── chroma_langchain/        # 方案 B 的向量库持久化
 ├── data/                    # 共享知识文档
 └── .env                     # 共享配置
@@ -36,6 +37,11 @@ set PYTHONPATH=D:\ai\rag\src
 .\.venv\Scripts\python.exe -m rag_langchain.main
 ```
 启动后输入问题即可问答，输入 `q` 退出。
+
+## 多步 Agent（进阶）
+方案 B 的 `main.py` 是单步基线。同目录的 `agent.py` 用 **LangGraph** 把它升级成
+"检索 → 评估 → 重试 → 生成"的多步 Agent：能判断检索结果是否相关，不相关则改写查询重试。
+详见 [README_agent.md](README_agent.md)。
 
 ## 与方案 A 的对比
 | 维度 | 方案 A（手写） | 方案 B（LangChain） |
