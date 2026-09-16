@@ -6,10 +6,22 @@
 ```
 xiaochongTecStudio/
 ├── rag/        # RAG 检索增强生成学习项目（方案 A 手写版 + 方案 B LangChain 版 + 多步 Agent）
+├── fastapi/    # FastAPI 三步学习 Demo（从最小 API 到 JWT 鉴权）
 └── ...
 ```
 
 ## 当前项目
+
+### [fastapi/](fastapi/README.md) — FastAPI 三步学习 Demo
+一套「边看原理边动手」的渐进式 FastAPI 练习，从最小 API 演进到模块化 + 真实 JWT 鉴权。
+
+| 步骤 | 学什么 | 说明 |
+| --- | --- | --- |
+| Step 1 | 路由匹配、路径参数、自动文档、自动序列化 | [README.md](fastapi/README.md) |
+| Step 2 | Pydantic 请求体校验、`Depends` 依赖注入、`Header()` | 同上 |
+| Step 3 | `APIRouter` 模块化、`pydantic-settings` 读 `.env`、**JWT 鉴权** | 同上 |
+
+**技术栈**：FastAPI + uvicorn + Pydantic + pydantic-settings + PyJWT。
 
 ### [rag/](rag/README.md) — RAG 学习项目
 本地向量化 + 远程大模型的检索增强生成案例，含两套可运行方案：
